@@ -3,9 +3,10 @@ import numpy as np
 import sys
 import json
 from sklearn.metrics.pairwise import cosine_similarity
+import logging
+logger = logging.getLogger(__name__)
 
-
-pickle_in = open(r"D:\xampp\htdocs\HPFilms\storage\model.pkl",'rb')
+pickle_in = open(r"D:\hoc\DH\nam4\HK3\TTTN\New folder\HPFilms_Project\storage\model.pkl",'rb')
 (cosine_sim,indices,count,id,soup) = pickle.load(pickle_in)
 
 
@@ -22,7 +23,7 @@ def get_recommendations(cosine_sim,movie_id=None):
   sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
 
   #Scores of the 1000 most similar movies
-  sim_scores = sim_scores[1:10]
+  sim_scores = sim_scores[1:1000]
 
   #Get the movie index
   movie_indices = [i[0] for i in sim_scores]

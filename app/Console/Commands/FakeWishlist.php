@@ -50,5 +50,6 @@ class FakeWishlist extends Command
                 }
             }
         }
+        dd('Fake Wishlist Successfully');
     }
 }

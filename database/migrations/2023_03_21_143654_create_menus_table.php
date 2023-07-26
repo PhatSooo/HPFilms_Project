@@ -13,11 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('menus', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name')->unique();
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('data_rows')) {
+            Schema::create('menus', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('name')->unique();
+                $table->timestamps();
+        });}
+        
     }
 
     /**

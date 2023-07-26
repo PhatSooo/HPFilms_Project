@@ -56,6 +56,7 @@ class GetKeywords extends Command
                 }
             } //end foreach respone
         } //end foreach movie_id
+        dd('Get Keywords Successfully');
     }
 
     private function attachKeywords($result,Movie $movie){

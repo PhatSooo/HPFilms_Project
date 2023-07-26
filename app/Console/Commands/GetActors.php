@@ -61,5 +61,6 @@ class GetActors extends Command
                 $i++;
             } // end foreach
         }
+        dd('Get Actors Successfully');
     }
 }

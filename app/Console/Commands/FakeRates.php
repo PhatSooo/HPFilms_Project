@@ -51,5 +51,6 @@ class FakeRates extends Command
             }
 
         }
+        dd('Fake Rates Successfully');
     }
 }

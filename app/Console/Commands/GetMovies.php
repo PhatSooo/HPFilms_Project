@@ -34,7 +34,7 @@ class GetMovies extends Command
         $this->getTopRate();
         $this->getUpcomming();
         $this->attachGenres();
-        // $this->asd();
+        dd('Get Movies Successfully');
     }
 
     public function asd()

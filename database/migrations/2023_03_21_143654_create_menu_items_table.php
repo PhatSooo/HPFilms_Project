@@ -13,20 +13,22 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('menu_items', function (Blueprint $table) {
-            $table->increments('id');
-            $table->unsignedInteger('menu_id')->nullable()->index('menu_items_menu_id_foreign');
-            $table->string('title');
-            $table->string('url');
-            $table->string('target')->default('_self');
-            $table->string('icon_class')->nullable();
-            $table->string('color')->nullable();
-            $table->integer('parent_id')->nullable();
-            $table->integer('order');
-            $table->timestamps();
-            $table->string('route')->nullable();
-            $table->text('parameters')->nullable();
-        });
+        if (!Schema::hasTable('data_rows')) {
+            Schema::create('menu_items', function (Blueprint $table) {
+                $table->increments('id');
+                $table->unsignedInteger('menu_id')->nullable()->index('menu_items_menu_id_foreign');
+                $table->string('title');
+                $table->string('url');
+                $table->string('target')->default('_self');
+                $table->string('icon_class')->nullable();
+                $table->string('color')->nullable();
+                $table->integer('parent_id')->nullable();
+                $table->integer('order');
+                $table->timestamps();
+                $table->string('route')->nullable();
+                $table->text('parameters')->nullable();
+        });}
+
     }
 
     /**

@@ -42,5 +42,6 @@ class GetTrailers extends Command
                 }
             }
         }
+        dd('Get Trailers Successfully');
     }
 }

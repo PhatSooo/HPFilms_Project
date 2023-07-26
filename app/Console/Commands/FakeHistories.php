@@ -41,7 +41,7 @@ class FakeHistories extends Command
 
             while ($i < $times){
                 // radom day
-                $int = mt_rand(1232055681,1262055681);
+                $int = mt_rand(mktime(0, 0, 0, 1, 1, date('Y')),time());
                 $day = date("Y-m-d H:i:s",$int);
 
                 $random = random_int(2,13);
@@ -54,5 +54,6 @@ class FakeHistories extends Command
                 $i++;
             }
         }
+        dd('Fake Histories Successfully');
     }
 }

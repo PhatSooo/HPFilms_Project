@@ -51,5 +51,6 @@ class GetReviews extends Command
             }
 
         } //end foreach movie_id
+        dd('Get Reviews Successfully');
     }
 }

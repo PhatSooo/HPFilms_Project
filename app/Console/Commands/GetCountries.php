@@ -42,6 +42,7 @@ class GetCountries extends Command
                 ]);
             }
         }
+        dd('Get Countries Successfully');
     }
 
     private function getCountries($production_country){

@@ -90,10 +90,8 @@ class MovieController extends Controller
             ->select('crews.*')
             ->get();
 
-
         // Recommnedation Related Movies
         $list_rec = $this->Recommendation($id[0]->movie_id);
-
         return view('pages.moviesingle', compact('list_rec','title', 'movie', 'get_genres', 'get_keywords', 'get_actors', 'get_stars_by_user', 'get_rates', 'get_reviews', 'get_favorites', 'get_directs', 'get_writers'));
     }
 
@@ -241,7 +239,6 @@ class MovieController extends Controller
             ->toArray();
 
         $film = array_merge($get_name,$get_actors, $get_crews, $get_genres, $get_keywords);
-
         // $film = array_values($film);
         $film = array_map('get_object_vars', $film);
         $film = array_map('array_values', $film);
@@ -263,7 +260,6 @@ class MovieController extends Controller
         }
 
         $data = $process->getOutput();
-
         $data = str_replace("\r\n", '', $data);
         $data = trim($data, '[]');
         $data = explode(', ', $data);

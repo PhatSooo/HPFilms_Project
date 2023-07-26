@@ -75,6 +75,6 @@ class GetCrews extends Command
                 $i++;
             } // end foreach
         }
-
+        dd('Get Crews Successfully');
     }
 }
