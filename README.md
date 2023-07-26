@@ -17,3 +17,8 @@ run these commands to get Movies API in sequense:
     <br>php artisan fake:histories
     <br>php artisan fake:rates
     <br>php artisan fake:wishlist
+
+    <br>pip install numpy
+    <br>pip install scikit-learn
+    <br>pip install pandas
+    <br>pip install "pandas<2.0.0"
