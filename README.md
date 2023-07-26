@@ -1,3 +1,7 @@
+run composer install // to install library
+    <br>composer require tcg/voyager
+    <br>php artisan voyager:install --with-dummy
+
 LINK MODEL RECOMMENDATION SYSTEM: bit.ly/mrs_phatsoo
 ADD THIS FILE TO path: storage/
 
