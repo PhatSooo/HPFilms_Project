@@ -1,24 +1,21 @@
-run composer install // to install library
-    <br>composer require tcg/voyager
-    <br>php artisan voyager:install --with-dummy
+## Installation
 
-LINK MODEL RECOMMENDATION SYSTEM: bit.ly/mrs_phatsoo
-ADD THIS FILE TO path: storage/
+1. Run `composer install` to install the library.
+2. Run `composer require tcg/voyager` to install Voyager.
+3. Run `php artisan voyager:install --with-dummy` to install Voyager with dummy data.
 
-run these commands to get Movies API in sequense:
-    <br>php artisan get:genres
-    <br>php artisan get:movies
-    <br>php artisan get:actors
-    <br>php artisan get:countries
-    <br>php artisan get:crews
-    <br>php artisan get:keywords
-    <br>php artisan get:reviews
-    <br>php artisan get:trailers
-    <br>php artisan fake:histories
-    <br>php artisan fake:rates
-    <br>php artisan fake:wishlist
+## Model Recommendation System
 
-    <br>pip install numpy
-    <br>pip install scikit-learn
-    <br>pip install pandas
-    <br>pip install "pandas<2.0.0"
+* Download the model file from [bit.ly/mrs_phatsoo](https://bit.ly/mrs_phatsoo) and save it to the `storage` directory.
+* Run the following commands to get the Movies API data in sequence:
+php artisan get:genres
+php artisan get:movies
+php artisan get:actors
+php artisan get:countries
+php artisan get:crews
+php artisan get:keywords
+php artisan get:reviews
+php artisan get:trailers
+php artisan fake:histories
+php artisan fake:rates
+php artisan fake:wishlist
